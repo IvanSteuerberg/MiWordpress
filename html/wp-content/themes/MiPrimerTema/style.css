@@ -15,5 +15,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 body{
+text-align: center;
 background-color: #0d66c2;
+}
+body#singular{
+    background-color: #8825ff;
 }

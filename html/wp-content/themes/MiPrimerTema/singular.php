@@ -1,16 +1,13 @@
-<?php
-/**
- * The template for displaying single posts and pages.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
-
-get_header();
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" type="text/css" />
+	<?php wp_head(); ?>
+</head>
+<body id="singular">
+<?php get_header(); ?>
 
 <main id="site-content" role="main">
 
@@ -24,8 +21,8 @@ get_header();
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail('large');
 			} ?>
-			<b><?php the_content(); ?></b>
-    <?php
+            <b><?php the_content(); ?></b>
+			<?php
 			wp_link_pages();
 			edit_post_link();
 
@@ -36,3 +33,5 @@ get_header();
 
 </main><!-- #site-content -->
 <?php get_footer(); ?>
+</body>
+</html>
