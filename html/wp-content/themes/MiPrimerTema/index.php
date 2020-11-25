@@ -10,9 +10,8 @@
 <?php get_header() ?> <!-- Obtenemos el header -->
 <h1><?php bloginfo( 'name' ); ?></h1>
 <h2><?php bloginfo( 'description' ); ?></h2>
-<?php $count = 0; ?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <?php $count++; ?>
 	<?php
     title_with_link();
     if ( has_post_thumbnail() ) {
